@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 尝试加个toolbar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        />
+    <!--  要把Layout_above recyclerview去掉-->
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/pictureShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="250dp"
+        />
+    <RadioGroup
+        android:id="@+id/rg_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bar_bg"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/tab_style"
+            android:drawableTop="@drawable/bar_home_bg"
+            android:text="单选" />
+        <RadioButton
+            android:id="@+id/rb_classify"
+            style="@style/tab_style"
+            android:drawableTop="@drawable/bar_search_bg"
+            android:text="多选" />
+        <RadioButton
+            android:id="@+id/rb_read"
+            style="@style/tab_style"
+            android:drawableTop="@drawable/bar_brand_bg"
+            android:text="剪裁" />
+
+        <RadioButton
+            android:id="@+id/rb_user"
+            style="@style/tab_style"
+            android:drawableTop="@drawable/bar_more_bg"
+            android:text="拍照" />
+        <RadioButton
+            android:id="@+id/rb_cart"
+            style="@style/tab_style"
+            android:drawableTop="@drawable/bar_shopping_bg"
+            android:text="编辑" />
+    </RadioGroup>
+</RelativeLayout>
