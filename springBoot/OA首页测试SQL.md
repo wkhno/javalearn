@@ -82,3 +82,9 @@ SELECT self.*
 insert into oa_user_weekly_conf (select distinct(user_id),15 from oa_user_roles where user_id like '%c%') ON DUPLICATE KEY UPDATE conf_id=13;
 ```
 
+
+
+```sql
+SELECT * FROM `lx_files` where DATE_FORMAT(update_time,'%Y-%m-%d')<'2019-08-01'
+```
+
